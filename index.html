@@ -12,20 +12,10 @@
   </head>
   <body>
         <nav class="navbar navbar-dark bg-dark">
-             <div class="container">
-                 <div class="row">
-                       <div class="col-md-8">
-                          <a class="navbar-brand pl-5" href="#">
-                              <p>Logo</p>
-                          </a> 
-                       </div>
-                       <div style="color: white" class="col-md-4 align-self-center ">
-                           <p>Criptomoedas</p>
-                       </div>
-                    
-                 </div>
-             </div>
-          
+           <div class="container">
+                <a class="navbar-brand" href="#">Logo</a>
+                <span style="color: white">Criptomoedas</span>
+            </div>                 
         </nav>
         <div class="container pt-5">
           <div class="row">             
@@ -73,7 +63,7 @@
                                 <div class="input-group-prepend">
                                   <div class="input-group-text">R$</div>
                                 </div>
-                                <input type="text" class="form-control" id="inlineFormInputGroup valor" placeholder="Digite o valor">
+                                <input type="text" class="form-control" id="valor-converter" placeholder="Digite o valor">
                                 <div class="input-group-prepend">
                                   <div class="input-group-text">,00</div>
                                 </div>
@@ -82,13 +72,14 @@
                       </div>
                       <div class="form-group">
                             <select class="form-control" id="opcoes">
+                                  <option selected>Escolha</option>
                                   <option value="bitcoin">Bitcoin</option>
+                                  <option value="ethereum">Eth</option>
+                                  <option value="dogecoin">DOGE Coin</option>
                             </select>
                       </div>
-                        <button class="btn btn-primary btn-lg btn-block" onclick="resposta()" >Converter</button>
-                        <div class="pt-3">
-                            <p id="resposta">Resultado:</p>
-                        </div>                      
+                        <button class="btn btn-primary btn-lg btn-block mb-3" onclick="acharMoeda()">Converter</button>
+                        <span><b>Resultado:</b><span id="resultado"></span></span>                  
                     </form>
                 </div>
            </div>            
@@ -102,13 +93,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
-
-   
-   
-   
-   
-   
+        </footer>  
    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -116,6 +101,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="js/criptomoeda.js"></script>
-    <script src="js/resposta.js"></script>
   </body>
 </html>
